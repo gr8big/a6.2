@@ -1,0 +1,73 @@
+/* this is the most i have ever commented a CSS file */
+
+/* Colour variables - this helps with consistency */
+:root {
+    --bg: #040404; /* Page background */
+    --fg: #fff; /* Foreground for general text items */
+    --card-bg: #141414; /* Background for cards, primarily product list items */
+    --card-transparent-bg: #14141480; /* Background for transparent cards */
+    --fg-blue: #29ccfd; /* First accent colour */
+    --fg-red: #ff86a5; /* Second accent colour */
+    --border: #ffffff32; /* Border for card items */
+    --topbar: #000000a4; /* Topbar! */
+    --topbar-btn-invisible: #ffffff00; /* Topbar button before hovering */
+    --topbar-btn-hover: #ffffff2f; /* Topbar button on hover */
+}
+
+/* Font imports - Coiny & Jost */
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Basic tag styling */
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'Jost', Verdana, Geneva, Tahoma, sans-serif; /* plentiful fallbacks */
+}
+p {
+    font-size: 1rem;
+    font-weight: bold; /* Standard text should use <small> */
+}
+h1 { /* Primarily the homepage text */
+    font-family: "Coiny", 'Times New Roman', Times, serif;
+    font-weight: 700;
+}
+button {
+    transition: background-color .125s linear, box-shadow .125s linear;
+}
+
+/* Basic classes */
+.text-glow-red {
+    color: var(--fg-red);
+    box-shadow: 0px 0px 2rem var(--fg-red);
+}
+.text-glow-blue {
+    color: var(--fg-blue);
+    box-shadow: 0px 0px 2rem var(--fg-blue);
+}
+
+/* Topbar-related classes */
+.topbar {
+    position: fixed; /* won't move on scroll */
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 2rem;
+    backdrop-filter: blur(16px); /* Last I checked blur() doesn't support rem */
+}
+.topbar-inner {
+    margin: .125rem 1rem;
+}
+.topbar-button {
+    position: relative;
+    width: 6rem;
+    height: 1.75rem;
+    background: var(--topbar-btn-invisible);
+}
+.topbar-button:hover {
+    background-color: var(--topbar-btn-hover);
+}
+.topbar-icon-main { /* Should be used alongside topbar-button */
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: .25rem;
+}
