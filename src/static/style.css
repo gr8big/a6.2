@@ -1,4 +1,4 @@
-/* this is the most i have ever commented a CSS file */
+/* This is the basic stylehseet used on every page. */
 
 /* Colour variables - this helps with consistency */
 :root {
@@ -32,6 +32,8 @@ h1 { /* Primarily the homepage text */
     font-weight: 700;
 }
 button {
+    height: 2rem;
+    border-radius: 1rem;
     transition: background-color .125s linear, box-shadow .125s linear;
 }
 
@@ -43,6 +45,15 @@ button {
 .text-glow-blue {
     color: var(--fg-blue);
     box-shadow: 0px 0px 2rem var(--fg-blue);
+}
+.button-primary { /* button red - should be used alongside text-glow-red */
+    border: .125rem solid var(--fg-red);
+}
+.button-secondary { /* button blue - should be used alongside text-glow-blue */
+    border: .125rem solid var(--fg-blue);
+}
+.main-content { /* This is just an easy way to add consistent topbar spacing */
+    margin-top: 2.25rem; /* Bit of padding */
 }
 
 /* Topbar-related classes */
@@ -62,6 +73,7 @@ button {
     width: 6rem;
     height: 1.75rem;
     background: var(--topbar-btn-invisible);
+    border-radius: .25rem;
 }
 .topbar-button:hover {
     background-color: var(--topbar-btn-hover);
@@ -69,5 +81,4 @@ button {
 .topbar-icon-main { /* Should be used alongside topbar-button */
     width: 1.75rem;
     height: 1.75rem;
-    border-radius: .25rem;
 }
